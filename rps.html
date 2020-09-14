@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+Which one will it be?<br/>
+
+<a href="#" onclick="playRoshambo('paper')">paper</a>
+<a href="#" onclick="playRoshambo('rock')">rock</a>
+<a href="#" onclick="playRoshambo('scissors')">scissors</a>
+<div id="results"></div>
+<script>
+playRoshambo = function(clientGesture){
+//server always chooses rock
+
+if (clientGesture=='rock') {
+result = "tie";
+}
+
+if (clientGesture=='paper') {
+result = "win";
+}
+
+if (clientGesture=='scissors') {
+result = "lose";
+}
+
+document.getElementById('results').innerHTML = result;
+
+}
+</script>
+
+<br/>
+</body>
+</html>
